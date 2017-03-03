@@ -3,6 +3,7 @@ library(ggplot2)
 library(dplyr)
 
 shinyServer(function(input, output) {
+
     output$plot <- renderPlot({
         d <- diamonds %>%
             filter(grepl(input$cut,     cut), 
@@ -23,8 +24,8 @@ shinyServer(function(input, output) {
             geom_hline(yintercept = pred, color = "blue")
         g
     })
+
     output$result <- renderText({
-        # renders the text for the prediction below the graph
         d <- filter(diamonds, grepl(input$cut, cut), grepl(input$color, color), grepl(input$clarity, clarity))
         fit <- lm(price ~ carat + I(carat^2), d)
         pred <- predict(fit, newdata = data.frame(carat = input$carat,
