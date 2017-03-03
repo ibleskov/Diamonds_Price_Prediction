@@ -1,14 +1,10 @@
 library(shiny)
 
-
-# Define UI for application that draws a histogram
 shinyUI(fluidPage(
     
-    # Application title
     titlePanel("If you're hard up for money, you can always sell your 
                grandma's diamonds!"),
     
-    # Sidebar with options selectors 
     sidebarLayout(
         sidebarPanel(
             helpText("This app will help you not miscalculate.
@@ -40,12 +36,8 @@ shinyUI(fluidPage(
         ),
         
         
-        # Show a plot with diamonds and regression line
         mainPanel(
-            plotOutput("plot"),
-#            h4("You can gain about:"),
             h4(textOutput("result"))
-#            h4("for that one!")
         )
     )
 ))
