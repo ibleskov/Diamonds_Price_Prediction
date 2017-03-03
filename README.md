@@ -9,4 +9,3 @@ its intrinsic characteristics:
 
 Access to the app:
 - The app is available <a href="http://glanz.shinyapps.io/diamonds_price_prediction/">here</a>
-- Sourse files `ui.R` and `server.R` can be found in the <a href = "http://github.com/ibleskov/Diamonds_Price_Prediction/">GitHub repo</a>
